@@ -1,7 +1,8 @@
-package com.ashwinrao.factfoundry
+package com.ashwinrao.factfoundry.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.ashwinrao.factfoundry.R
 
 class MainActivity : AppCompatActivity() {
 
