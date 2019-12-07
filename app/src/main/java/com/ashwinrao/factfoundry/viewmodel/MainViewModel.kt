@@ -1,11 +1,10 @@
 package com.ashwinrao.factfoundry.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.ashwinrao.factfoundry.data.repository.Repository
 
-class MainViewModel : ViewModel() {
 
-    init {
+class MainViewModel(private val repository: Repository) : ViewModel() {
 
-    }
 
 }

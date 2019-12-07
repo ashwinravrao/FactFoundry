@@ -1,21 +1,20 @@
 package com.ashwinrao.factfoundry
 
 import android.app.Application
-import com.ashwinrao.factfoundry.di.AppComponent
-import com.ashwinrao.factfoundry.di.DaggerAppComponent
-import com.ashwinrao.factfoundry.di.NetworkModule
+import com.ashwinrao.factfoundry.sl.networkModule
+import com.ashwinrao.factfoundry.sl.viewModelModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class FactFoundry : Application() {
 
-    lateinit var appComponent: AppComponent
-
     override fun onCreate() {
         super.onCreate()
-        appComponent =
-            DaggerAppComponent
-                .builder()
-                .networkModule(NetworkModule(this))
-                .build()
+
+        startKoin {
+            androidContext(this@FactFoundry)
+            modules(listOf(networkModule, viewModelModule))
+        }
     }
 
 }

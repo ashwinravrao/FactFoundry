@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Fact Foundry</string>
     <string name="title_activity_main">Choose a country</string>
-    <string name="subtitle_activity_main">Midtronics Interview Demo</string>
+    <string name="subtitle_activity_main">for more information</string>
     <string name="account_circle_transition">account circle transition</string>
+    <string name="content_description_account_circle">About the developer</string>
+    <string name="content_description_country_thumbnail">country thumbnail</string>
 </resources>

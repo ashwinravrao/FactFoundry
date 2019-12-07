@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/outer_card"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:rippleColor="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            android:textAlignment="gravity"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:fontFamily="sans-serif-medium"
+            tools:text="Argentina" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

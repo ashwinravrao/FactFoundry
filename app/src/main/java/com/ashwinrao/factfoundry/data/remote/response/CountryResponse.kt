@@ -3,7 +3,7 @@ package com.ashwinrao.factfoundry.data.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Country(
+data class CountryResponse(
     @SerializedName("alpha2Code")
     val alpha2Code: String, // AR
     @SerializedName("alpha3Code")

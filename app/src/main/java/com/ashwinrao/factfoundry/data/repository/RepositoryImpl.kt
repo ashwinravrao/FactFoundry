@@ -1,4 +1,7 @@
 package com.ashwinrao.factfoundry.data.repository
 
-class RepositoryImpl : Repository {
+import com.ashwinrao.factfoundry.data.remote.DataSource
+
+
+class RepositoryImpl(val dataSource: DataSource) : Repository {
 }

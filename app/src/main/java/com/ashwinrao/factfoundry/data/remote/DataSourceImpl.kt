@@ -1,4 +1,4 @@
 package com.ashwinrao.factfoundry.data.remote
 
-class DataSourceImpl : DataSource {
+class DataSourceImpl(val service: RestCountriesService) : DataSource {
 }

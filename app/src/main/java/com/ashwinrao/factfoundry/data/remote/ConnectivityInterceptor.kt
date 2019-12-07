@@ -1,4 +1,11 @@
 package com.ashwinrao.factfoundry.data.remote
 
-interface ConnectivityInterceptor {
+import okhttp3.Interceptor
+import okhttp3.Response
+
+interface ConnectivityInterceptor : Interceptor {
+
+    override fun intercept(chain: Interceptor.Chain): Response
+
+    fun isNetworkAvailable(): Boolean
 }
