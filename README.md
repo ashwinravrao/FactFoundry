@@ -1,6 +1,6 @@
 # Fact Foundry
 
-Demo app that displays information about countries via a RESTful API.
+Demo app that displays information about countries via a RESTful API. [Download the .apk file from Releases.](https://github.com/ashwinravrao/FactFoundry/releases)
 
 ![screenshots](https://github.com/ashwinravrao/FactFoundry/blob/master/app/src/main/assets/screenshots.png)
 
