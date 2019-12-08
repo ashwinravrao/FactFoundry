@@ -2,6 +2,8 @@
 
 Demo app that displays information about countries via a RESTful API.
 
+![screenshots](https://github.com/ashwinravrao/FactFoundry/blob/master/app/src/main/assets/screenshots.png)
+
 ## Languages, libraries and tools used
 
  - [Kotlin](https://kotlinlang.org)
