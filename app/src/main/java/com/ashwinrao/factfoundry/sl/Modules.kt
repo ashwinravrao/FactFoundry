@@ -18,8 +18,6 @@ val networkModule = module {
 
     single { RestCountriesService() }
 
-//    single { ConnectivityInterceptorImpl(androidApplication()) } bind ConnectivityInterceptor::class
-
     viewModel { DetailViewModel(get()) }
 
 }
