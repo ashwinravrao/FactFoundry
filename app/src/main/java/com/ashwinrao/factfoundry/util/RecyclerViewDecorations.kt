@@ -10,7 +10,7 @@ import com.ashwinrao.factfoundry.util.UnitConversion.dpToPx
 
 object RecyclerViewDecorations {
 
-    fun gridLayoutDecoration(
+    fun addItemDecoration(
         context: Context,
         recyclerView: RecyclerView,
         spanCount: Int, @Nullable horizontalBias: Float?

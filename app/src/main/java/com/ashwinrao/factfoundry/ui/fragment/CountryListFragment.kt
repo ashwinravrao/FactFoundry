@@ -45,7 +45,7 @@ class CountryListFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager =
             GridLayoutManager(this.requireContext(), 1, RecyclerView.VERTICAL, false)
-        RecyclerViewDecorations.gridLayoutDecoration(requireContext(), recyclerView, 1, 0f)
+        RecyclerViewDecorations.addItemDecoration(requireContext(), recyclerView, 1, 0f)
         recyclerView.adapter = adapter
     }
 
