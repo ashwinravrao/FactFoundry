@@ -14,15 +14,11 @@ class DataSourceImpl(private val service: RestCountriesService) : DataSource {
     override suspend fun fetchCountryResponse(name: String): List<CountryResponse>? {
         try {
             fetchedCountryResponse = service.getCountry(name)
-        } catch (e: NoConnectionException) {
-            Log.e(tag, e.message!!)
+        } catch (e: IOException) {
+            Log.e(tag, e.message ?: "Not connected to the internet")
         } catch (f: HttpException) {
             Log.e(tag, f.message())
         }
         return fetchedCountryResponse
-    }
-
-    inner class NoConnectionException(message: String) : IOException(message) {
-        override val message: String? = "Not connected to the internet. Try again later."
     }
 }

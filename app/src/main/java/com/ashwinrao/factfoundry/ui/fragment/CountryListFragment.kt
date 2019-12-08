@@ -13,10 +13,13 @@ import com.ashwinrao.factfoundry.databinding.FragmentCountryListBinding
 import com.ashwinrao.factfoundry.extra_detail_activity
 import com.ashwinrao.factfoundry.ui.CountriesListAdapter
 import com.ashwinrao.factfoundry.ui.activity.DetailActivity
+import com.ashwinrao.factfoundry.util.NetworkAvailability
 import com.ashwinrao.factfoundry.util.RecyclerViewDecorations
+import com.google.android.material.snackbar.Snackbar
 
 class CountryListFragment : Fragment() {
 
+    private lateinit var binding: FragmentCountryListBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: CountriesListAdapter
     private lateinit var countriesList: MutableList<String>
@@ -32,7 +35,7 @@ class CountryListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentCountryListBinding.inflate(inflater)
+        binding = FragmentCountryListBinding.inflate(inflater)
         recyclerView = binding.recyclerView
         return binding.root
     }
@@ -52,9 +55,13 @@ class CountryListFragment : Fragment() {
     }
 
     private fun startDetailActivity(position: Int) {
-        val intent = Intent(activity, DetailActivity::class.java)
-        intent.putExtra(extra_detail_activity, countriesList[position])
-        startActivity(intent)
+        if (NetworkAvailability.isNetworkAvailable(activity?.applicationContext)) {
+            val intent = Intent(activity, DetailActivity::class.java)
+            intent.putExtra(extra_detail_activity, countriesList[position])
+            startActivity(intent)
+        } else {
+            Snackbar.make(binding.root, "No internet connection", Snackbar.LENGTH_SHORT).show()
+        }
     }
 
 }

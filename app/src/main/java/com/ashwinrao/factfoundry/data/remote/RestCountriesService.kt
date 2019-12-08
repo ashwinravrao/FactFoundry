@@ -7,7 +7,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-import java.util.concurrent.TimeUnit
 
 interface RestCountriesService {
 
@@ -17,12 +16,8 @@ interface RestCountriesService {
     ): List<CountryResponse>
 
     companion object {
-        operator fun invoke(connectivityInterceptor: ConnectivityInterceptorImpl): RestCountriesService {
-            val okHttpClient =
-                OkHttpClient.Builder().addInterceptor(connectivityInterceptor)
-                    .readTimeout(10, TimeUnit.SECONDS)
-                    .connectTimeout(10, TimeUnit.SECONDS)
-                    .build()
+        operator fun invoke(): RestCountriesService {
+            val okHttpClient = OkHttpClient.Builder().build()
             return Retrofit.Builder()
                 .client(okHttpClient)
                 .baseUrl(restcountries_v2_api_base_url)
