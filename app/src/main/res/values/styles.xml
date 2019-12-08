@@ -1,9 +1,9 @@
 <resources>
+
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowContentTransitions">true</item>
         <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
@@ -16,11 +16,99 @@
         <item name="android:statusBarColor">@android:color/black</item>
     </style>
 
-    <style name="TransparentToolbarTitle" parent="TextAppearance.AppCompat">
-        <item name="android:textColor">@android:color/transparent</item>
+    <style name="ProfileHeading" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
-    <style name="DarkToolbarTitle" parent="TextAppearance.AppCompat">
+    <style name="EntryHeading" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+    </style>
+
+    <style name="EntryHeading.Title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="EntryDetail" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
+
+    <style name="EntryHeading.Date">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ViewMoreButton" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">5dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+        <item name="cardBackgroundColor">@color/colorAccent</item>
+        <item name="android:layout_margin">24dp</item>
+    </style>
+
+    <style name="ViewMoreText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="FieldName" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="FieldValue" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ExpandedToolbarTitle" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CollapsedToolbarTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
 </resources>

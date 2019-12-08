@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -23,11 +22,11 @@
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:collapsedTitleTextAppearance="@style/CollapsedToolbarTitle"
                 app:contentScrim="@color/colorPrimary"
+                app:expandedTitleTextAppearance="@style/ExpandedToolbarTitle"
                 app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-                app:title="@{country.name}"
-                app:collapsedTitleTextAppearance="@style/DarkToolbarTitle"
-                app:expandedTitleTextAppearance="@style/TransparentToolbarTitle">
+                app:title="@{country.name}">
 
                 <ImageView
                     android:id="@+id/flag_image_view"
@@ -50,15 +49,136 @@
             android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-            <TextView
-                android:id="@+id/title_country"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                android:textColor="@android:color/black"
-                tools:text="Argentina"
-                android:layout_margin="24dp"
-                android:text="@{country.name}" />
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/native_name" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{country.nativeName}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/capital" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{country.capital}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/population" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{String.valueOf(country.population)}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/area" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{String.valueOf(country.area)}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/region" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{country.region}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/subregion" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{country.subregion}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/FieldName"
+                            android:text="@string/demonym" />
+
+                        <TextView
+                            style="@style/FieldValue"
+                            android:text="@{country.demonym}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.core.widget.NestedScrollView>

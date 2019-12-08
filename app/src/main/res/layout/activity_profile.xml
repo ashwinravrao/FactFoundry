@@ -102,15 +102,9 @@
                 android:paddingBottom="32dp">
 
                 <TextView
+                    style="@style/ProfileHeading"
                     android:id="@+id/heading_personal_projects"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="24dp"
-                    android:fontFamily="sans-serif-medium"
                     android:text="@string/projects_heading"
-                    android:textSize="18sp"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                    android:textColor="@color/colorAccent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -128,36 +122,21 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/title_project_graphql_trial"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/title_project_graphql_trial" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_november_2019"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_november_2019" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/detail_graph_ql_trial"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/project_graph_ql_trial"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginTop="8dp"
-                    android:lineSpacingExtra="2dp"
-                    android:textColor="@android:color/black"
                     android:text="@string/detail_graph_ql_trial" />
 
                 <LinearLayout
@@ -173,36 +152,21 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/title_project_tissues"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/title_project_tissues" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_october_2019"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_october_2019" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/detail_tissues"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/project_tissues"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginTop="8dp"
-                    android:lineSpacingExtra="2dp"
-                    android:textColor="@android:color/black"
                     android:text="@string/detail_tissues" />
 
                 <LinearLayout
@@ -218,76 +182,41 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/title_project_packup"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/title_project_packup" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_september_2019"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_september_2019" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/detail_packup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
-                    android:lineSpacingExtra="2dp"
                     android:text="@string/detail_packup"
-                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/project_packup" />
 
                 <com.google.android.material.card.MaterialCardView
+                    style="@style/ViewMoreButton"
                     android:id="@+id/view_more_projects_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:rippleColor="@color/colorPrimary"
-                    app:cardBackgroundColor="@color/colorAccent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_margin="24dp"
                     app:layout_constraintTop_toBottomOf="@id/detail_packup">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="8dp"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/white"
+                        style="@style/ViewMoreText"
                         android:text="@string/title_view_more_projects_on_github_button" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView
+                    style="@style/ProfileHeading"
                     android:id="@+id/heading_education"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="sans-serif-medium"
                     android:text="@string/education_heading"
-                    android:textSize="18sp"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                    android:textColor="@color/colorAccent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/view_more_projects_button"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -305,23 +234,12 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingEnd="16dp"
-                        tools:ignore="RtlSymmetry"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/degree_masters"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/degree_masters" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_masters"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_masters" />
 
                 </LinearLayout>
 
@@ -336,32 +254,24 @@
                     app:layout_constraintTop_toBottomOf="@id/degree_masters">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        style="@style/EntryHeading.Title"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black"
                         android:text="@string/depaul" />
 
                     <TextView
+                        style="@style/EntryHeading.Date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/chicago"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black" />
+                        android:text="@string/chicago" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/gpa_masters"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
                     android:text="@string/gpa_masters"
-                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/school_masters" />
 
@@ -378,23 +288,12 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingEnd="16dp"
-                        tools:ignore="RtlSymmetry"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/degree_bachelors"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/degree_bachelors" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_bachelors"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_bachelors" />
 
                 </LinearLayout>
 
@@ -409,34 +308,23 @@
                     app:layout_constraintTop_toBottomOf="@id/degree_bachelors">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        style="@style/EntryHeading.Title"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black"
                         android:text="@string/depaul" />
 
                     <TextView
+                        style="@style/EntryHeading.Date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/chicago"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black" />
+                        android:text="@string/chicago" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/ProfileHeading"
                     android:id="@+id/heading_work_experience"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="sans-serif-medium"
                     android:text="@string/work_experience_heading"
-                    android:textSize="18sp"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                    android:textColor="@color/colorAccent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/school_bachelors"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -454,23 +342,12 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingEnd="16dp"
-                        tools:ignore="RtlSymmetry"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/title_job_research_coord"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/title_job_research_coord" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_research_coord"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_research_coord" />
 
                 </LinearLayout>
 
@@ -485,34 +362,24 @@
                     app:layout_constraintTop_toBottomOf="@id/job_research_coord">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        style="@style/EntryHeading.Title"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black"
                         android:text="@string/employer_research_coord" />
 
                     <TextView
+                        style="@style/EntryHeading.Date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/chicago"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black" />
+                        android:text="@string/chicago" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/detail_research_coord"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
-                    android:lineSpacingExtra="2dp"
                     android:text="@string/detail_research_coord"
-                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/employer_research_coord" />
 
@@ -529,23 +396,12 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingEnd="16dp"
-                        tools:ignore="RtlSymmetry"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/title_job_research_assistant"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/title_job_research_assistant" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_research_assistant"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_research_assistant" />
 
                 </LinearLayout>
 
@@ -560,34 +416,24 @@
                     app:layout_constraintTop_toBottomOf="@id/job_research_assistant">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        style="@style/EntryHeading.Title"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black"
                         android:text="@string/employer_research_coord" />
 
                     <TextView
+                        style="@style/EntryHeading.Date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/chicago"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black" />
+                        android:text="@string/chicago" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/detail_research_assistant"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
-                    android:lineSpacingExtra="2dp"
                     android:text="@string/detail_research_assistant"
-                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/employer_research_assistant" />
 
@@ -604,23 +450,12 @@
                     app:layout_constraintEnd_toEndOf="parent">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingEnd="16dp"
-                        tools:ignore="RtlSymmetry"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/title_job_sales_rep"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Title"
+                        android:text="@string/title_job_sales_rep" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/date_sales_rep"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/black" />
+                        style="@style/EntryHeading.Date"
+                        android:text="@string/date_sales_rep" />
 
                 </LinearLayout>
 
@@ -635,58 +470,36 @@
                     app:layout_constraintTop_toBottomOf="@id/job_sales_rep">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        style="@style/EntryHeading.Title"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black"
                         android:text="@string/employer_sales_rep" />
 
                     <TextView
+                        style="@style/EntryHeading.Date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/oak_brook"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                        android:textColor="@android:color/black" />
+                        android:text="@string/oak_brook" />
 
                 </LinearLayout>
 
                 <TextView
+                    style="@style/EntryDetail"
                     android:id="@+id/detail_sales_rep"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
-                    android:lineSpacingExtra="2dp"
                     android:text="@string/detail_sales_rep"
-                    android:textColor="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/employer_sales_rep" />
 
                 <com.google.android.material.card.MaterialCardView
+                    style="@style/ViewMoreButton"
                     android:id="@+id/view_linkedin_profile_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:rippleColor="@color/colorPrimary"
-                    app:cardBackgroundColor="@color/colorAccent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_margin="24dp"
                     app:layout_constraintTop_toBottomOf="@id/detail_sales_rep">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="8dp"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                        android:textColor="@android:color/white"
+                        style="@style/ViewMoreText"
                         android:text="@string/title_view_linkedin_profile_button" />
 
                 </com.google.android.material.card.MaterialCardView>

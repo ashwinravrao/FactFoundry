@@ -39,4 +39,11 @@
     <string name="my_name">Ashwin Rao</string>
     <string name="my_title">Android Developer</string>
     <string name="content_description_country_flag">country flag</string>
+    <string name="capital">Capital</string>
+    <string name="population">Population</string>
+    <string name="area">Area</string>
+    <string name="region">Region</string>
+    <string name="subregion">Sub-Region</string>
+    <string name="demonym">Demonym</string>
+    <string name="native_name">Native Name</string>
 </resources>
