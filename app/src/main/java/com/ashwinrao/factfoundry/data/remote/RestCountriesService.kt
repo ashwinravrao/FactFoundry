@@ -11,10 +11,10 @@ import java.util.concurrent.TimeUnit
 
 interface RestCountriesService {
 
-    @GET("/{name}")
+    @GET("name/{name}")
     suspend fun getCountry(
         @Path("name") name: String
-    ): CountryResponse
+    ): List<CountryResponse>
 
     companion object {
         operator fun invoke(connectivityInterceptor: ConnectivityInterceptorImpl): RestCountriesService {

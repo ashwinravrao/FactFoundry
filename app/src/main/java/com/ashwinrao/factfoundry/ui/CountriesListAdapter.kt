@@ -3,14 +3,15 @@ package com.ashwinrao.factfoundry.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ashwinrao.factfoundry.R
 import com.ashwinrao.factfoundry.databinding.ViewholderCountryBinding
 
-class CountriesListAdapter :
-    ListAdapter<String, CountriesListAdapter.CountryViewHolder>(DiffUtil()) {
+class CountriesListAdapter(
+    private val countriesList: List<String>,
+    private val adapterOnClick: (Int) -> Unit
+) :
+    RecyclerView.Adapter<CountriesListAdapter.CountryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder =
         CountryViewHolder(
@@ -23,17 +24,19 @@ class CountriesListAdapter :
         )
 
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
-        holder.binding.countryName.text = getItem(position)
+        holder.binding.countryName.text = countriesList[position]
     }
 
+    override fun getItemCount(): Int = countriesList.size
+
     inner class CountryViewHolder(val binding: ViewholderCountryBinding) :
-        RecyclerView.ViewHolder(binding.root)
-}
+        RecyclerView.ViewHolder(binding.root) {
 
-class DiffUtil : DiffUtil.ItemCallback<String>() {
-    override fun areItemsTheSame(oldItem: String, newItem: String): Boolean =
-        oldItem == newItem
+        init {
+            binding.outerCard.setOnClickListener { adapterOnClick(adapterPosition) }
+        }
 
-    override fun areContentsTheSame(oldItem: String, newItem: String): Boolean =
-        oldItem.contentEquals(newItem)
+    }
+
+
 }

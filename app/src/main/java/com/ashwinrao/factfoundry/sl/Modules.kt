@@ -3,7 +3,7 @@ package com.ashwinrao.factfoundry.sl
 import com.ashwinrao.factfoundry.data.remote.*
 import com.ashwinrao.factfoundry.data.repository.Repository
 import com.ashwinrao.factfoundry.data.repository.RepositoryImpl
-import com.ashwinrao.factfoundry.viewmodel.MainViewModel
+import com.ashwinrao.factfoundry.viewmodel.DetailViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
@@ -19,10 +19,6 @@ val networkModule = module {
 
     single { ConnectivityInterceptorImpl(androidApplication()) } bind ConnectivityInterceptor::class
 
-}
-
-val viewModelModule = module {
-
-    viewModel { MainViewModel(get()) }
+    viewModel { DetailViewModel(get()) }
 
 }

@@ -1,5 +1,6 @@
 package com.ashwinrao.factfoundry.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ashwinrao.factfoundry.R
 import com.ashwinrao.factfoundry.databinding.FragmentCountryListBinding
+import com.ashwinrao.factfoundry.extra_detail_activity
 import com.ashwinrao.factfoundry.ui.CountriesListAdapter
+import com.ashwinrao.factfoundry.ui.activity.DetailActivity
 import com.ashwinrao.factfoundry.util.RecyclerViewDecorations
 
 class CountryListFragment : Fragment() {
@@ -40,13 +43,18 @@ class CountryListFragment : Fragment() {
     }
 
     private fun initializeRecyclerView() {
-        adapter = CountriesListAdapter()
-        adapter.submitList(countriesList)
+        adapter = CountriesListAdapter(countriesList) { position -> startDetailActivity(position) }
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager =
             GridLayoutManager(this.requireContext(), 1, RecyclerView.VERTICAL, false)
         RecyclerViewDecorations.addItemDecoration(requireContext(), recyclerView, 1, 0f)
         recyclerView.adapter = adapter
+    }
+
+    private fun startDetailActivity(position: Int) {
+        val intent = Intent(activity, DetailActivity::class.java)
+        intent.putExtra(extra_detail_activity, countriesList[position])
+        startActivity(intent)
     }
 
 }

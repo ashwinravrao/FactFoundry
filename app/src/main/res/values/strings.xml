@@ -38,4 +38,5 @@
     <string name="title_view_linkedin_profile_button">View full profile on LinkedIn</string>
     <string name="my_name">Ashwin Rao</string>
     <string name="my_title">Android Developer</string>
+    <string name="content_description_country_flag">country flag</string>
 </resources>

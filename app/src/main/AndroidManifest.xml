@@ -27,6 +27,9 @@
         <activity
             android:name=".ui.activity.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar.DarkStatusBar" />
+        <activity
+            android:name=".ui.activity.DetailActivity"
+            android:theme="@style/AppTheme.NoActionBar.DarkStatusBar" />
     </application>
 
 </manifest>
